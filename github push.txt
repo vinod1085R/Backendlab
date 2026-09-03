@@ -1,0 +1,109 @@
+PS C:\Users\vinod R\OneDrive\Documents\BDlab> (Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned) ; (& "c:\Users\vinod R\OneDrive\Documents\BDlab\.venv\Scripts\Activate.ps1")
+(.venv) PS C:\Users\vinod R\OneDrive\Documents\BDlab> python pg3.py
+ * Serving Flask app 'pg3'
+ * Debug mode: on
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+Press CTRL+C to quit
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 129-083-385
+127.0.0.1 - - [03/Sep/2026 16:07:52] "GET /students HTTP/1.1" 500 -
+127.0.0.1 - - [03/Sep/2026 16:08:00] "GET /students HTTP/1.1" 500 -
+ * Detected change in 'C:\\Users\\vinod R\\OneDrive\\Documents\\BDlab\\pg3.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 129-083-385
+127.0.0.1 - - [03/Sep/2026 16:08:31] "GET /students HTTP/1.1" 200 -
+127.0.0.1 - - [03/Sep/2026 16:11:08] "POST /students HTTP/1.1" 201 -
+127.0.0.1 - - [03/Sep/2026 16:11:47] "GET /students HTTP/1.1" 200 -
+(.venv) PS C:\Users\vinod R\OneDrive\Documents\BDlab> python pg4.py
+ * Serving Flask app 'pg4'
+ * Debug mode: on
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+Press CTRL+C to quit
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 129-083-385
+127.0.0.1 - - [03/Sep/2026 16:35:49] "GET /students/1 HTTP/1.1" 405 -
+127.0.0.1 - - [03/Sep/2026 16:37:05] "PUT /students/1 HTTP/1.1" 200 -
+(.venv) PS C:\Users\vinod R\OneDrive\Documents\BDlab> 
+ *  History restored 
+
+PS C:\Users\vinod R\OneDrive\Documents\BDlab> git sta^C
+PS C:\Users\vinod R\OneDrive\Documents\BDlab> u(Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned) ; (& "c:\Users\vinod R\OneDrive\Documents\BDlab\.venv\Scripts\Activate.ps1")
+u : The term 'u' is not recognized as the name of a cmdlet, function, script file, or 
+operable program. Check the spelling of the name, or if a path was included, verify 
+that the path is correct and try again.
+At line:1 char:1
++ u(Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned) ; ...
++ ~
+    + CategoryInfo          : ObjectNotFound: (u:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+(.venv) PS C:\Users\vinod R\OneDrive\Documents\BDlab> git status
+fatal: not a git repository (or any of the parent directories): .git
+(.venv) PS C:\Users\vinod R\OneDrive\Documents\BDlab> dir
+
+
+    Directory: C:\Users\vinod R\OneDrive\Documents\BDlab
+
+
+Mode                 LastWriteTime         Length Name                                   
+----                 -------------         ------ ----                                   
+dar--l          03-09-26     16:03                .venv                                  
+-a---l          22-08-26     21:50         219414 BD Lab Manual.pdf                      
+-a---l          22-08-26     22:28           1430 pg1.py                                 
+-a---l          24-08-26     06:17           3163 pg2.py                                 
+-a---l          03-09-26     16:08           2829 pg3.py                                 
+-a---l          03-09-26     16:24           3083 pg4.py                                 
+
+
+(.venv) PS C:\Users\vinod R\OneDrive\Documents\BDlab> git init
+Initialized empty Git repository in C:/Users/vinod R/OneDrive/Documents/BDlab/.git/
+(.venv) PS C:\Users\vinod R\OneDrive\Documents\BDlab> git branch -M main
+(.venv) PS C:\Users\vinod R\OneDrive\Documents\BDlab> git remote add origin https://github.com/vinod1085R/Backendlab.git            
+(.venv) PS C:\Users\vinod R\OneDrive\Documents\BDlab> git add .
+(.venv) PS C:\Users\vinod R\OneDrive\Documents\BDlab> git commit -m "Add backend lab programs"
+[main (root-commit) da19170] Add backend lab programs
+ 5 files changed, 396 insertions(+)
+ create mode 100644 BD Lab Manual.pdf
+ create mode 100644 pg1.py
+ create mode 100644 pg2.py
+ create mode 100644 pg3.py
+ create mode 100644 pg4.py
+(.venv) PS C:\Users\vinod R\OneDrive\Documents\BDlab> git push -u origin main
+To https://github.com/vinod1085R/Backendlab.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/vinod1085R/Backendlab.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+(.venv) PS C:\Users\vinod R\OneDrive\Documents\BDlab> git pull origin main --allow-unrelated-histories
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 861 bytes | 30.00 KiB/s, done.
+From https://github.com/vinod1085R/Backendlab
+ * branch            main       -> FETCH_HEAD
+ * [new branch]      main       -> origin/main
+Merge made by the 'ort' strategy.
+ README.md | 2 ++
+ 1 file changed, 2 insertions(+)
+ create mode 100644 README.md
+(.venv) PS C:\Users\vinod R\OneDrive\Documents\BDlab> git push -u origin main
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (9/9), 196.29 KiB | 8.53 MiB/s, done.
+Total 9 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), done.
+To https://github.com/vinod1085R/Backendlab.git
+   920b0c8..0ae57dc  main -> main
+branch 'main' set up to track 'origin/main'.
+(.venv) PS C:\Users\vinod R\OneDrive\Documents\BDlab> 
+fwd-i-search: _
